@@ -1,0 +1,46 @@
+[
+  {
+    "username":"admin",
+    "password":"123456",
+    "authority":{
+      "create":true,
+      "retrieve":true,
+      "update":true,
+      "delete":true
+    },
+    "messageCount": 10
+  },
+  {
+    "username":"ash",
+    "password":"123",
+    "authority":{
+      "create":true,
+      "retrieve":true,
+      "update":true,
+      "delete":false
+    },
+    "messageCount": 25
+  },
+  {
+    "username":"jeff",
+    "password":"456",
+    "authority":{
+      "create":false,
+      "retrieve":true,
+      "update":true,
+      "delete":false
+    },
+    "messageCount": 0
+  },
+  {
+    "username":"kaplan",
+    "password":"789",
+    "authority":{
+      "create":false,
+      "retrieve":true,
+      "update":false,
+      "delete":false
+    },
+    "messageCount": 100000
+  }
+]
