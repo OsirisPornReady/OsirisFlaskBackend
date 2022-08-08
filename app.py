@@ -1,29 +1,17 @@
-from flask import Flask, request, jsonify
+from flask import Flask
 from flask_cors import CORS
 
-from user.login import *
+from Controller.user.user_controller import user_bp  # controller导入处
+
 
 app = Flask(__name__)
+app.register_blueprint(user_bp)  # controller注册处
 CORS(app, resources=r'/*')
-
-users = Users()
 
 
 @app.route('/')
 def hello_world():  # put application's code here
     return 'Hello World!'
-
-
-@app.route('/user/login', methods=["POST"])
-def login():
-    if request.method == "POST":
-        userdata = request.get_json()  # 此处直接处理为字典了
-        user, state = users.validate(userdata)
-        data = {
-            'user': user,
-            'state': state
-        }
-        return jsonify(data)
 
 
 if __name__ == '__main__':
