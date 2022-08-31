@@ -1,0 +1,70 @@
+[
+  {
+    "title": "Down Under",
+    "stars": [
+      "Luude",
+      "Colin"
+    ],
+    "thumbnail": "/assets/down under.jpg",
+    "tags": [
+      "D & B"
+    ],
+    "path": ""
+  },
+  {
+    "title": "Good Morning",
+    "stars": [
+      "Kanye West"
+    ],
+    "thumbnail": "/assets/Good morning.jpg",
+    "tags": [
+      "hip hop",
+      "rap"
+    ],
+    "path": ""
+  },
+  {
+    "title": "Prey",
+    "stars": [
+      "Mick Gordon"
+    ],
+    "thumbnail": "/assets/prey.jpg",
+    "tags": [
+      "Game Theme"
+    ],
+    "path": ""
+  },
+  {
+    "title": "Sad Machine",
+    "stars": [
+      "Porter Robinson"
+    ],
+    "thumbnail": "/assets/sad machine.jpg",
+    "tags": [
+      "vocaloid"
+    ],
+    "path": ""
+  },
+  {
+    "title": "Snow Crash",
+    "stars": [
+      "Mitch Murder"
+    ],
+    "thumbnail": "/assets/snow crash.jpg",
+    "tags": [
+      "Retro"
+    ],
+    "path": ""
+  },
+  {
+    "title": "Sakanaction",
+    "stars": [
+      "サカナクション"
+    ],
+    "thumbnail": "/assets/Sakanaction_album_cover.jpg",
+    "tags": [
+      "electro & rock"
+    ],
+    "path": ""
+  }
+]
