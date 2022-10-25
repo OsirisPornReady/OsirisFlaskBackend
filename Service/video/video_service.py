@@ -99,5 +99,24 @@ def deleteVideo(data, **kw):
     return True
 
 
+@SessionDecorator
+def swapVideoOrder(data, **kw):
+    session = kw['session']
+
+    pid = data['pid']
+    cid = data['cid']
+    query_video_p = session.query(Video).filter(Video.id == pid).first()
+    query_video_c = session.query(Video).filter(Video.id == cid).first()
+
+    pOrder = query_video_p.video_order
+    cOrder = query_video_c.video_order
+
+    query_video_p.video_order = cOrder
+    query_video_c.video_order = pOrder
+
+    session.commit()
+    return True
+
+
 if __name__ == '__main__':
     pass

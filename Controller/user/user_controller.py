@@ -11,6 +11,9 @@ user_bp = Blueprint('user', __name__, url_prefix='/user')  # 在蓝本对象的�
 def login():
     if request.method == "POST":
         userdata = request.get_json()  # 此处直接处理为字典了
+        user_token = request.headers.get('myusercode')
+        print('user code', user_token)
+        print('headers', request.headers)
         res = service.login(userdata)
         try:
             print(res)

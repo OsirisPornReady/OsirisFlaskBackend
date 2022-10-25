@@ -66,5 +66,22 @@ def deleteVideo():
         return jsonify(res)
 
 
+@video_bp.route('/swapVideoOrder', methods=['POST'])
+def swapVideoOrder():
+    if request.method == "POST":
+        req_data = request.get_json()  # 此处直接处理为字典了
+        print('接收到了swapVideoOrder请求', req_data)
+        state = service.swapVideoOrder(req_data)
+        if state:
+            res = make_response(jsonify(
+                {
+                    'state': state
+                }
+            ), 200)
+        else:
+            res = make_response('swap failed', 500)
+        return res
+
+
 if __name__ == '__main__':
     pass
